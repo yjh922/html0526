@@ -59,6 +59,7 @@
         let msg;
         let index=0;
         let flag=true;
+        let set;
         let flagList = {
             flags: [
                 {
@@ -159,10 +160,10 @@
                 move();
                 
             });document.getElementById("bt_auto").addEventListener("click", function(){
-                setInterval("move()", 100);
+                set=setInterval("move()", 1000);
             });
             document.getElementById("bt_stop").addEventListener("click", function(){
-                
+                clearInterval(set);
             });
             
         });
